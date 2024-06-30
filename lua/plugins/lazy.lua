@@ -63,6 +63,42 @@ require('lazy').setup({
       }
   },
   {
+    'robitx/gp.nvim',
+    config = function()
+      require('gp').setup {
+        cmd_prefix = 'Gp',
+        openai_api_key = os.getenv 'OPENAI_API_KEY',
+        openai_api_endpoint = os.getenv 'OPENAI_API_BASE_FULL',
+      }
+    end,
+    cmd = {
+      'GpChatNew',
+      'GpRewrite',
+      'GpAppend',
+      'GpPrepend',
+      'GpEnew',
+      'GpPopup',
+    },
+    lazy = true,
+  },
+  {
+    "jackMort/ChatGPT.nvim",
+      event = "VeryLazy",
+      config = function()
+        require("chatgpt").setup({
+          -- api_key_cmd = os.getenv 'OPENAI_API_KEY',
+          -- api_host_cmd = os.getenv 'OPENAI_API_BASE',
+          predefined_chat_gpt_prompts = "https://raw.githubusercontent.com/julianobarbosa/awesome-chatgpt-prompts/main/prompts.csv",
+      })
+      end,
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "folke/trouble.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  },
+  {
     'Exafunction/codeium.vim',
     config = function ()
       -- Change '<C-g>' here to any keycode you like.

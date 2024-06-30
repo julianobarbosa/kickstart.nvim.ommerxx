@@ -41,3 +41,10 @@ vim.api.nvim_set_keymap("n", "<leader>nn", ":Noice dismiss<CR>", {noremap=true})
 vim.keymap.set("n", "<leader>ee", "<cmd>GoIfErr<cr>",
   {silent = true, noremap = true}
 )
+
+-- David-Kunz/gen.nvim
+vim.keymap.set("n", "<leader>gg", ":Gen<cr>",
+  {silent = true, noremap = true}
+)
+
+-- vim.keymap.set('v', '<leader>]', ':Gen Enhance_Grammar_Spelling<CR>'),
