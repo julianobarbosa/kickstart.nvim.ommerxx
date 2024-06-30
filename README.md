@@ -1,6 +1,1 @@
-forked from 
-https://github.com/omerxx/dotfiles.git (omerxx/dotfiles)
-
-
-added my config for lazy.nvim
-
+The author has cloned the dotfiles repository from <https://github.com/omerxx/dotfiles.git> (named "omerxx/dotfiles") and added their own configuration file for Lazy.nvim to the repository.
